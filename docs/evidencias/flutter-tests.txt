@@ -1,0 +1,83 @@
+# flutter test --coverage --reporter expanded (2026-11-04T23:12Z)
+00:00 +0: loading test/accessibility_test.dart
+00:00 +0: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +1: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +2: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +3: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +4: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +5: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +6: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:00 +7: test/accessibility_test.dart: task list meets tap target, label and contrast guidelines
+00:02 +8: test/compatibility_test.dart: task list renders without overflow on teléfono pequeño 320x568
+00:02 +9: test/screens/login_screen_test.dart: validates fields before calling the API
+00:02 +10: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +11: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +12: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +13: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +14: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +15: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +16: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +17: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +18: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +19: test/screens/login_screen_test.dart: validates fields before calling the API
+00:03 +20: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +21: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +22: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +23: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +24: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +25: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +26: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +27: test/screens/login_screen_test.dart: validates fields before calling the API
+00:04 +28: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:04 +29: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:04 +30: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:04 +31: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:04 +32: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:04 +33: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:04 +34: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +35: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +36: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +37: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +38: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +39: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +40: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +41: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +42: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:05 +43: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +44: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +45: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +46: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +47: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +48: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +49: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +50: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +51: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +52: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +53: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +54: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +55: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +56: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +57: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +58: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +59: test/screens/task_list_screen_test.dart: creates a task from the dialog
+00:06 +60: test/screens/task_list_screen_test.dart: a blank title shows a clear message and is not sent
+00:06 +61: test/screens/task_list_screen_test.dart: rapid repeated taps on save create only one task
+00:07 +62: test/screens/task_list_screen_test.dart: a failed save keeps the typed title (no data loss)
+00:08 +63: test/screens/task_list_screen_test.dart: a completed task stays visible in the list
+00:08 +64: test/screens/task_list_screen_test.dart: a failed toggle keeps the previous state and explains why
+00:08 +65: test/screens/task_list_screen_test.dart: edits a task title
+00:09 +66: test/screens/task_list_screen_test.dart: deletes a task after confirmation
+00:09 +67: test/widgets/task_list_panel_test.dart: shows loading state
+00:09 +68: test/widgets/task_list_panel_test.dart: shows loading state
+00:09 +69: test/widgets/task_list_panel_test.dart: shows loading state
+00:10 +70: test/widgets/task_list_panel_test.dart: shows loading state
+00:10 +71: test/widgets/task_list_panel_test.dart: shows empty state
+00:10 +72: test/widgets/task_list_panel_test.dart: shows error state
+00:10 +73: test/widgets/task_list_panel_test.dart: shows task data
+00:11 +74: test/widgets/task_list_panel_test.dart: tapping retry invokes the callback exactly once
+00:11 +75: test/widgets/task_list_panel_test.dart: error state has no retry button when no callback is given
+00:11 +76: test/widgets/task_list_panel_test.dart: loading wins over error and data
+00:11 +77: test/widgets/task_list_panel_test.dart: completed tasks show status as text, not only style
+00:11 +78: test/widgets/task_list_panel_test.dart: toggle and delete callbacks receive the right task
+00:11 +79: test/widgets/task_list_panel_test.dart: markup-like titles are shown as plain text
+00:12 +80: All tests passed!

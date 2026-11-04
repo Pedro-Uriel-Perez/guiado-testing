@@ -1,0 +1,23 @@
+# Sesión exploratoria contra http://localhost:3000/api/v1 (2026-11-04T23:09:58.679Z)
+Usuario sintético: explora-1793833798683@example.test (token redactado)
+
+| Entrada | HTTP | Resultado |
+|---|---|---|
+| 120 caracteres | 201 | guardado (120 caracteres, empieza con U+0061 U+0061 U+0061) |
+| 121 caracteres | 400 | Ingresa un título válido. |
+| solo espacios | 400 | Ingresa un título válido. |
+| solo tabulador y salto de línea | 400 | Ingresa un título válido. |
+| 120 emoji | 201 | guardado (120 caracteres, empieza con U+1F680 U+1F680 U+1F680) |
+| 121 emoji | 400 | Ingresa un título válido. |
+| solo espacio de ancho cero U+200B | 201 | guardado (1 caracteres, empieza con U+200B) |
+| solo espacio de no separación U+00A0 | 400 | Ingresa un título válido. |
+| inyección SQL | 201 | guardado (11 caracteres, empieza con U+0027 U+0020 U+004F) |
+| markup | 201 | guardado (25 caracteres, empieza con U+003C U+0073 U+0063) |
+
+## 5 POST idénticos en paralelo (simula toques repetidos sin protección en el cliente)
+Respuestas: 201, 201, 201, 201, 201 -> tareas "Doble toque" creadas: 5
+
+## Otros
+ID con formato inválido -> 404
+Token manipulado -> 401
+Sin token -> 401

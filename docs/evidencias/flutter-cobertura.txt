@@ -1,0 +1,9 @@
+# Cobertura de líneas Flutter (flutter test --coverage)
+ 83.3%  20/24  lib/src/models/task.dart
+ 96.7%  58/60  lib/src/screens/login_screen.dart
+ 72.4%  76/105  lib/src/services/api_client.dart
+100.0%  11/11  lib/src/validators.dart
+ 97.4%  113/116  lib/src/screens/task_list_screen.dart
+100.0%  39/39  lib/src/widgets/task_list_panel.dart
+ 45.0%  9/20  lib/src/services/token_storage.dart
+TOTAL 86.9% (326/375 líneas)

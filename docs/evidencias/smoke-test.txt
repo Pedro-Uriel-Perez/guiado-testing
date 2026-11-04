@@ -1,0 +1,9 @@
+Smoke test contra http://localhost:3000 (2026-11-04T23:10:36.695Z)
+PASS  La API responde /health
+PASS  Registro de cuenta sintética
+PASS  Login funciona
+PASS  La lista de tareas carga
+PASS  Se puede crear una tarea
+PASS  Se puede borrar la tarea (limpieza)
+PASS  Logout funciona y revoca la sesión
+Resultado: OK (7/7)

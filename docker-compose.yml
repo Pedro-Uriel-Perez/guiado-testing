@@ -1,0 +1,30 @@
+# Bases de datos locales para desarrollo y pruebas.
+# - db      -> base de desarrollo (puerto 5434 en el host; 5432 suele estar ocupado)
+# - db-test -> base AISLADA para pruebas automatizadas (puerto 5433).
+#              Las pruebas la borran y recrean; nunca apuntes las pruebas a otra base.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: taskmanager
+      POSTGRES_PASSWORD: taskmanager
+      POSTGRES_DB: taskmanager
+    ports:
+      - "5434:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  db-test:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: taskmanager_test
+    ports:
+      - "5433:5432"
+    # Sin volumen: los datos de prueba son desechables.
+    tmpfs:
+      - /var/lib/postgresql/data
+
+volumes:
+  db-data:
