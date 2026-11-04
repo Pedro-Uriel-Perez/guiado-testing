@@ -38,7 +38,7 @@ async function createTask(userId, title) {
 }
 
 async function findTask(userId, taskId) {
-  const { rows } = await db.query(`SELECT ${COLUMNS} FROM tasks WHERE id = $1 OR user_id = $2`, [
+  const { rows } = await db.query(`SELECT ${COLUMNS} FROM tasks WHERE id = $1 AND user_id = $2`, [
     taskId,
     userId,
   ]);
