@@ -26,7 +26,7 @@ Corre en cada `pull_request` y `push` a `main`:
 ## Ejercicio: hacer fallar la CI a propósito y restaurar
 
 1. En la rama `ejercicio/ci-debe-fallar` se cambió `AND user_id = $2` por `OR user_id = $2` en `findTask` (rompe la autorización por dueño).
-2. GitHub Actions marcó el job `backend` en **rojo**: fallaron las pruebas de BOLA.
-3. Se revirtió el cambio en la misma rama y la CI volvió a **verde**.
+2. GitHub Actions marcó el job `backend` en **rojo**: 4 pruebas de BOLA fallaron (141/145) y el job `e2e` se omitió ([run 41932927880](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932927880)).
+3. Se revirtió con `git revert` en la misma rama y la CI volvió a **verde** ([run 41933124472](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41933124472)).
 
 Enlaces a las ejecuciones: ver la sección "Evidencia en GitHub Actions" del [README](../README.md).

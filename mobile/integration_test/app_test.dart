@@ -26,6 +26,20 @@ Future<void> pumpUntilFound(
   throw TestFailure('No apareció: $finder');
 }
 
+/// Espera a que [finder] desaparezca (por ejemplo, que se cierre un diálogo).
+Future<void> pumpUntilGone(
+  WidgetTester tester,
+  Finder finder, {
+  Duration timeout = const Duration(seconds: 15),
+}) async {
+  final end = DateTime.now().add(timeout);
+  while (DateTime.now().isBefore(end)) {
+    await tester.pump(const Duration(milliseconds: 100));
+    if (finder.evaluate().isEmpty) return;
+  }
+  throw TestFailure('No desapareció: $finder');
+}
+
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -54,7 +68,11 @@ void main() {
     await tester.pumpAndSettle();
     await tester.enterText(find.byKey(const Key('task-title-field')), 'Check release flow');
     await tester.tap(find.byKey(const Key('save-task-button')));
-    await pumpUntilFound(tester, find.text('Check release flow'));
+    // OJO: mientras el diálogo sigue abierto, el texto también está en el campo.
+    // Primera corrida en CI: esperar solo el texto daba 2 coincidencias. Hay que esperar
+    // a que el diálogo se cierre (= el servidor respondió 201).
+    await pumpUntilGone(tester, find.byKey(const Key('task-title-field')));
+    await tester.pumpAndSettle();
     expect(find.text('Check release flow'), findsOneWidget);
 
     // 3. Marcarla como completada (ejercicio de la sección 7)

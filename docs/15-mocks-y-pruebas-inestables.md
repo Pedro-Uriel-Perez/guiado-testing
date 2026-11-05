@@ -29,3 +29,10 @@ La prueba E2E cubre el hueco entre ambas: confirma que el cliente y el servidor 
 | Concurrencia de refresh | Prueba determinista con 3 peticiones simultáneas → 1 refresh |
 | Rate limit entre pruebas | Cada prueba de rate limit crea su propia app (`createApp({ authRateLimitMax })`) con su propio contador |
 | Herramienta que altera datos | Unicode enviado por script (`fetch`), no por la consola (ver sesión exploratoria) |
+
+## Caso real: la E2E falló en su primera corrida en CI
+
+- **Síntoma:** `Found 2 widgets with text "Check release flow"` justo después de tocar "Guardar".
+- **Causa:** la prueba esperaba a que apareciera el texto, pero ese texto **ya estaba** escrito en el campo del diálogo todavía abierto. La espera terminaba al instante y contaba 2 coincidencias: el campo y, a veces, la fila nueva. Según el tiempo de respuesta del servidor, podía pasar o fallar: una prueba inestable de manual.
+- **Corrección:** esperar a que **desaparezca** el campo del diálogo (`pumpUntilGone`), que solo ocurre cuando la API respondió `201`, y después verificar que hay exactamente una coincidencia.
+- **Lo que no se hizo:** volver a correr la prueba hasta que pasara. Se encontró la causa y se controló la sincronización.

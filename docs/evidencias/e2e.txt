@@ -1,0 +1,17 @@
+# Job e2e de GitHub Actions (run 41932534597, ubuntu-latest, Flutter 3.47.9, Node 22, PostgreSQL 16)
+# https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932534597
+
+Smoke test contra http://localhost:3000 (2026-11-04T23:18:41.889Z)
+PASS  La API responde /health
+PASS  Registro de cuenta sintética
+PASS  Login funciona
+PASS  La lista de tareas carga
+PASS  Se puede crear una tarea
+PASS  Se puede borrar la tarea (limpieza)
+PASS  Logout funciona y revoca la sesión
+Resultado: OK (7/7)
+xvfb-run -a flutter test integration_test -d linux
+Building Linux application...                                   
+✅ Passing tests
+✅ user can sign in, create a task, complete it and log out
+Task Manager API escuchando en http://localhost:3000
