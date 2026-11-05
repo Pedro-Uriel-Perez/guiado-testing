@@ -110,4 +110,5 @@ flutter test integration_test -d windows   # E2E, con la API corriendo
 | [Primera corrida en `main`](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41931891027) | ❌ La E2E falló por un error de sincronización **en la prueba** (el texto también estaba en el diálogo abierto). Ver [docs/15](docs/15-mocks-y-pruebas-inestables.md) |
 | [`main` con la E2E corregida](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932534597) | ✅ backend, flutter y e2e en verde |
 | [Rama `ejercicio/ci-debe-fallar`, código roto a propósito](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932927880) | ❌ 4 pruebas de BOLA fallan (141/145); la E2E se omite |
-| [Misma rama después del `git revert`](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41933124472) | ✅ de vuelta a verde |
+| [Misma rama después del `git revert`](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41933124472) | ✅ backend de vuelta a verde (la E2E falló porque esta rama aún tenía la versión vieja de la prueba E2E) |
+| [Misma rama tras integrar `main`](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41945480664) | ✅ los 3 jobs en verde |

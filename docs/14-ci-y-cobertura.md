@@ -27,6 +27,6 @@ Corre en cada `pull_request` y `push` a `main`:
 
 1. En la rama `ejercicio/ci-debe-fallar` se cambió `AND user_id = $2` por `OR user_id = $2` en `findTask` (rompe la autorización por dueño).
 2. GitHub Actions marcó el job `backend` en **rojo**: 4 pruebas de BOLA fallaron (141/145) y el job `e2e` se omitió ([run 41932927880](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932927880)).
-3. Se revirtió con `git revert` en la misma rama y la CI volvió a **verde** ([run 41933124472](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41933124472)).
+3. Se revirtió con `git revert` en la misma rama y el job `backend` volvió a **verde** ([run 41933124472](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41933124472)). La E2E de esa corrida falló porque la rama se creó antes de corregir la prueba E2E; tras integrar `main`, los 3 jobs quedaron en verde ([run 41945480664](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41945480664)).
 
 Enlaces a las ejecuciones: ver la sección "Evidencia en GitHub Actions" del [README](../README.md).
