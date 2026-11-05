@@ -16,7 +16,7 @@ Práctica completa del tutorial **"Become a Better Application Tester: A Hands-O
 | Backend: unitarias + API/integración (Jest + Supertest + PostgreSQL) | **145/145 ✅**, 96.8 % de líneas cubiertas | [`docs/evidencias/backend-tests-y-cobertura.txt`](docs/evidencias/backend-tests-y-cobertura.txt) |
 | Flutter: unitarias + widgets + cliente con mocks + accesibilidad + layouts | **80/80 ✅**, 86.9 % de líneas cubiertas | [`docs/evidencias/flutter-tests.txt`](docs/evidencias/flutter-tests.txt) |
 | `flutter analyze` | Sin problemas ✅ | [`docs/evidencias/flutter-analyze.txt`](docs/evidencias/flutter-analyze.txt) |
-| End-to-end (app → API → PostgreSQL) | Job `e2e` en GitHub Actions | [`docs/07-pruebas-end-to-end.md`](docs/07-pruebas-end-to-end.md) |
+| End-to-end (app → API → PostgreSQL) | **1/1 ✅** en CI (Linux) + smoke 7/7 | [`docs/evidencias/e2e.txt`](docs/evidencias/e2e.txt) |
 | Smoke test | **7/7 ✅** | [`docs/evidencias/smoke-test.txt`](docs/evidencias/smoke-test.txt) |
 | Carga k6 (local) | p95 = 7.5 ms ✅ / umbral de 1 ms ❌ (ejercicio) | [`docs/10-rendimiento-k6.md`](docs/10-rendimiento-k6.md) |
 | Sesión exploratoria | 2 bugs reales (1 corregido, 1 abierto) + 1 observación | [`docs/03-sesion-exploratoria.md`](docs/03-sesion-exploratoria.md) |
@@ -102,3 +102,12 @@ flutter test integration_test -d windows   # E2E, con la API corriendo
 - Solo entornos locales o de CI. Ninguna prueba de carga o de seguridad se ejecutó contra sistemas ajenos.
 - Solo datos sintéticos (`@example.test`). Ningún token ni contraseña real en la evidencia.
 - La base de pruebas se recrea sola, y el script de reinicio se niega a tocar bases que no terminen en `_test`.
+
+## Evidencia en GitHub Actions
+
+| Ejecución | Resultado |
+|---|---|
+| [Primera corrida en `main`](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41931891027) | ❌ La E2E falló por un error de sincronización **en la prueba** (el texto también estaba en el diálogo abierto). Ver [docs/15](docs/15-mocks-y-pruebas-inestables.md) |
+| [`main` con la E2E corregida](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932534597) | ✅ backend, flutter y e2e en verde |
+| [Rama `ejercicio/ci-debe-fallar`, código roto a propósito](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932927880) | ❌ 4 pruebas de BOLA fallan (141/145); la E2E se omite |
+| [Misma rama después del `git revert`](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41933124472) | ✅ de vuelta a verde |

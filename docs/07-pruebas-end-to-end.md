@@ -31,4 +31,4 @@ flutter test integration_test -d emulator-5554 --dart-define=API_BASE_URL=http:/
 
 El job `e2e` de [`.github/workflows/tests.yml`](../.github/workflows/tests.yml) levanta PostgreSQL y la API, corre el smoke test y ejecuta esta prueba en Linux con `xvfb-run`.
 
-Evidencia: [`evidencias/e2e.txt`](evidencias/e2e.txt) y la ejecución del job `e2e` en GitHub Actions.
+Evidencia: [`evidencias/e2e.txt`](evidencias/e2e.txt) (✅ 1/1 en Linux, [run 41932534597](https://github.com/Pedro-Uriel-Perez/guiado-testing/actions/runs/41932534597)). La primera corrida falló por un error de sincronización de la prueba; ver [15](15-mocks-y-pruebas-inestables.md).
